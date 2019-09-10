@@ -2,7 +2,13 @@
 
 ## Installation
 
-Install the relevant node_modules specified in package.json by running:
+Clone this repository onto your local machine:
+
+```bash
+git clone https://github.com/jackiwi/ps-automation.git
+```
+
+Inside the local folder ps-automation, install the relevant node_modules specified in package.json by running:
 
 ```bash
 npm install
