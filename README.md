@@ -22,12 +22,6 @@ To run **a specific script**, run:
 
 npm test -- --spec=FILENAME
 
-ex:
-
-```bash
-npm test -- --spec=task1
-```
-
 ### Tasks and Respective files
 
 All scripts are located in /test/specs .
