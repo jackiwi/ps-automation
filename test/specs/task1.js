@@ -1,4 +1,5 @@
-var assert = require('assert');
+var chai = require('chai');
+var assert = chai.assert;
 
 describe('Login Page', function () {
   it('should log in', function () {

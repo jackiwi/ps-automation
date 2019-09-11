@@ -1,11 +1,18 @@
-var assert = require('assert');
+var chai = require('chai');
+var assert = chai.assert;
 
-let numScrolls = Math.round(Math.random() * 5) + 1;
-
-if (process.env.USE_METHOD === '3'){          //TASK3
+if (process.env.USE_METHOD === '3'){
   if (process.env.NUM_SCROLLS > 0){
-    numScrolls = process.env.NUM_SCROLLS;
+    scrollInfinite(process.env.NUM_SCROLLS);
+  }else{
+    scrollInfinite(Math.round(Math.random() * 5) + 1);
   }
+}else if (process.env.USE_METHOD === '4'){
+  clickBoxes();
+}
+
+//Task 3
+function scrollInfinite(numScrolls){
   describe('Infinite Scroll', function () {
     it(`should scroll ${numScrolls} times`, function () {
       browser.url('http://the-internet.herokuapp.com/infinite_scroll');
@@ -15,7 +22,10 @@ if (process.env.USE_METHOD === '3'){          //TASK3
       }
     });
   });
-}else if (process.env.USE_METHOD === '4'){    //TASK4
+}
+
+//Task 4
+function clickBoxes(){
   describe ('Checkboxes', function () {
     var boxes;
     var num1Clicks = Math.round(Math.random() * 10) + 1;
