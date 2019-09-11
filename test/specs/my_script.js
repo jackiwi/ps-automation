@@ -5,7 +5,7 @@ if (process.env.USE_METHOD === '3'){
   if (process.env.NUM_SCROLLS > 0){
     scrollInfinite(process.env.NUM_SCROLLS);
   }else{
-    scrollInfinite(Math.round(Math.random() * 5) + 1);
+    scrollInfinite(Math.floor(Math.random() * 5) + 1);
   }
 }else if (process.env.USE_METHOD === '4'){
   clickBoxes();
@@ -28,8 +28,8 @@ function scrollInfinite(numScrolls){
 function clickBoxes(){
   describe ('Checkboxes', function () {
     var boxes;
-    var num1Clicks = Math.round(Math.random() * 10) + 1;
-    var num2Clicks = Math.round(Math.random() * 10) + 1;
+    var num1Clicks = Math.floor(Math.random() * 10) + 1;
+    var num2Clicks = Math.floor(Math.random() * 10) + 1;
 
     before(function () {
       browser.url('http://the-internet.herokuapp.com/checkboxes');
