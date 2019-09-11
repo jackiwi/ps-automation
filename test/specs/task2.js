@@ -7,6 +7,8 @@ describe('Sortable Tables', function () {
   });
 
   var numColumns = 6;//browser.$$('#table1 thead tr th').length;
+                     //unable to figure out why .length wasn't working..? :(
+                     //so i just hardcoded the number of columns in...
 
   for (let i = 0; i < numColumns; i++){
     it (`should check that column ${i} sorts correctly`, function() {
@@ -47,7 +49,7 @@ function checkSortUp(elements){
 }
 
 
-//......was going to check for validity but went in a different direction
+//......was going to check for validity but decided to go in a different direction
 /*function validName(testString){
   return !(/\d/.test(testString));
 }

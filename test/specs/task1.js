@@ -7,6 +7,7 @@ describe('Login Page', function () {
     browser.$('input[name="username"]').setValue('tomsmith');
     browser.$('input[name="password"]').setValue('SuperSecretPassword!');
     browser.$('button[type="submit"]').click();
+
     var pageUrl = browser.getUrl();
     assert.equal(pageUrl, 'http://the-internet.herokuapp.com/secure');
     //browser.pause(2000);
@@ -14,6 +15,7 @@ describe('Login Page', function () {
 
   it('should log out', function () {
     browser.$('.button*=Logout').click();
+    
     pageUrl = browser.getUrl();
     assert.equal(pageUrl, 'http://the-internet.herokuapp.com/login');
     //browser.pause(2000);

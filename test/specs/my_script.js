@@ -6,7 +6,7 @@ if (process.env.USE_METHOD === '3'){
     scrollInfinite(process.env.NUM_SCROLLS);
   }else{
     scrollInfinite(Math.floor(Math.random() * 5) + 1);
-  }
+  }//if no NUM_SCROLLS is specified, scroll a random number of times between 1 and 5.
 }else if (process.env.USE_METHOD === '4'){
   clickBoxes();
 }
